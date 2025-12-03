@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>检测报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: rgb(238,238,238);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: rgb(238, 238, 238);
+            padding: 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        .close-btn {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 18px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-right: 8px;
+            cursor: default;
+            color: rgb(0, 0, 245);
+            pointer-events: none;
+        }
+
+        .header-text {
+            color: rgb(0, 0, 245);
+            font-weight: 400;
+            /* 第一部分字体大小设置 */
+            font-size: 20.5px;
+            text-align: left;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 1em;
+        }
+
+        .main-content {
+            /* 第二部分（余下全文）字体大小设置 */
+            font-size: 17px;
+        }
+
+        .container {
+            background-color: #fff;
+            margin: 10px;
+            margin-top: 0;
+            padding: 0;
+            border-radius: 4px;
+        }
+
+        .form-section {
+            padding: 0;
+        }
+
+        .form-row {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            min-height: 48px;
+        }
+
+        .form-label {
+            width: 150px;
+            padding: 14px 16px;
+            padding-left: 8px;
+            background-color: #fff;
+            color: rgb(56, 96, 145);
+            flex-shrink: 0;
+        }
+
+        .form-value {
+            flex: 1;
+            padding: 14px 16px;
+            padding-left: 8px;
+            color: #333;
+        }
+
+        .form-value.empty {
+            color: #999;
+        }
+
+        .explanation {
+            padding: 16px;
+            background-color: #fff;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+            margin-top: 0;
+        }
+
+        .action-section {
+            margin: 10px;
+            margin-top: 20px;
+        }
+
+        .action-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .action-row:hover {
+            background-color: #f9f9f9;
+        }
+
+        .action-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .action-label {
+            color: rgb(61, 100, 148);
+        }
+
+        .action-link {
+            display: flex;
+            align-items: center;
+            color: rgb(51, 51, 51);
+            text-decoration: none;
+        }
+
+        .arrow {
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <span class="header-text">↖[X]结束访问,返回请向右滑动屏幕或者使用[<]按钮</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+    <div class="container">
+        <div class="form-section">
+            <div class="form-row">
+                <div class="form-label">委托单位名称</div>
+                <div class="form-value">额敏县金宇泉塑料制品有限公司</div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">委托单位地址</div>
+                <div class="form-value">新疆塔城地区额敏县塔额路十六地段020100075-2号</div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">样品名称</div>
+                <div class="form-value">全生物降解地膜</div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">样品批号</div>
+                <div class="form-value">2025-04-02</div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">受理日期</div>
+                <div class="form-value">2025/5/19</div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">检验项目</div>
+                <div class="form-value empty"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">判定依据</div>
+                <div class="form-value empty"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">检验结论</div>
+                <div class="form-value empty"></div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">当前进度</div>
+                <div class="form-value">检验完成</div>
+            </div>
+            <div class="form-row">
+                <div class="form-label">签发日期</div>
+                <div class="form-value">2025/6/4</div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-label"></div>
+            <div class="form-value">说明：此页面仅供预览,如需带电子签章报告,请下载此报告,并用pfd工具打开或打印。</div>
+        </div>
+    </div>
+
+    <div class="action-section">
+        <a class="action-row" href="pdf/2025X-J-JS0123委托书.pdf" download>
+            <div class="action-label">委托书</div>
+            <div class="action-link">
+                点击下载
+                <span class="arrow">›</span>
+            </div>
+        </a>
+        <a class="action-row" href="pdf/1238.pdf" download>
+            <div class="action-label">检测报告</div>
+            <div class="action-link">
+                点击下载
+                <span class="arrow">›</span>
+            </div>
+        </a>
+    </div>
+    </div>
+</body>
+</html>
