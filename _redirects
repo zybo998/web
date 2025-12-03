@@ -1,0 +1,5 @@
+# 允许访问的 PDF 报告路径
+/ViewPdfByQrCode/ReportDetail/*  /ViewPdfByQrCode/ReportDetail/:splat  200
+
+# 其他所有路径返回空白页面
+/*  /blank.html  200
